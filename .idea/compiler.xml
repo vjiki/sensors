@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="monitoring" target="22" />
+      <module name="monitoring.main" target="22" />
+      <module name="monitoring.test" target="22" />
+      <module name="warehouse" target="22" />
+      <module name="warehouse.main" target="22" />
+      <module name="warehouse.test" target="22" />
+      <module name="warehouseclient" target="22" />
+      <module name="warehouseclient.main" target="22" />
+      <module name="warehouseclient.test" target="22" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

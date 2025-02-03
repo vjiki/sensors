@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/monitoring.iml" filepath="$PROJECT_DIR$/monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monitoring.main.iml" filepath="$PROJECT_DIR$/.idea/modules/monitoring.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monitoring.test.iml" filepath="$PROJECT_DIR$/.idea/modules/monitoring.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sensors.iml" filepath="$PROJECT_DIR$/.idea/sensors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warehouse.iml" filepath="$PROJECT_DIR$/warehouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/warehouse.main.iml" filepath="$PROJECT_DIR$/.idea/modules/warehouse.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/warehouse.test.iml" filepath="$PROJECT_DIR$/.idea/modules/warehouse.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warehouseclient.iml" filepath="$PROJECT_DIR$/warehouseclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/warehouseclient.main.iml" filepath="$PROJECT_DIR$/.idea/modules/warehouseclient.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/warehouseclient.test.iml" filepath="$PROJECT_DIR$/.idea/modules/warehouseclient.test.iml" />
+    </modules>
+  </component>
+</project>
