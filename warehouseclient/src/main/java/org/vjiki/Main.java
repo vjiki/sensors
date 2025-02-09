@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.Random;
 
 public class Main {
     private static final String CENTRAL_HOST = "localhost";
@@ -15,13 +16,16 @@ public class Main {
         while(true) {
             try {
                 DatagramSocket socket = new DatagramSocket();
+                Random random = new Random();
+                int temp =  random.nextInt(100);
+                int humidity =  random.nextInt(100);
 
                 // Simulate temperature sensor data
-                String tempData = "sensor_id=t1;value=80";
+                String tempData = String.format("sensor_id=t1;value=%d", temp);
                 sendUdpData(socket, tempData, TEMP_SENSOR_PORT);
 
                 // Simulate humidity sensor data
-                String humidityData = "sensor_id=h1;value=90";
+                String humidityData = String.format( "sensor_id=h1;value=%d", humidity);
                 sendUdpData(socket, humidityData, HUMIDITY_SENSOR_PORT);
 
                 socket.close();

@@ -1,7 +1,5 @@
 package org.vjiki.monitoring.config;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,7 +16,6 @@ public class KafkaReceiverConfig {
     private String topic = "kafka.monitoring.sensors";
     private String bootstrapServers = "localhost:9092";
     private String groupId = "test-consumer-group";
-
 
     public String getTopic() {
         return topic;
@@ -48,8 +45,6 @@ public class KafkaReceiverConfig {
         return ReceiverOptions.<String, String>create(consumerProps())
 
                 .subscription(Collections.singleton(topic));
-        //                        .assignment(
-//        (Collections.singleton(new TopicPartition(TOPIC, 0))));
     }
 
     public Map<String, Object> consumerProps() {

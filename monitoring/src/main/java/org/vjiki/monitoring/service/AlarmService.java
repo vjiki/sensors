@@ -22,8 +22,6 @@ public class AlarmService {
 
     @PostConstruct
     public void processRecords() {
-
-
         KafkaReceiver.create(kafkaReceiverConfig.receiverOptions())
                 .receiveAutoAck()
                 .retryWhen(Retry.backoff(3,
@@ -33,51 +31,6 @@ public class AlarmService {
 //                            System.out.printf("Received message: %s\n", r);
                     processSensorData(r.key(), r.value());
                 });
-
-
-        // ReceiverOptions<Object, Object> options = ReceiverOptions.create()
-        //.maxDeferredCommits(100)
-        //.subscription(Collections.singletonList("someTopic"));
-
-
-        // KafkaReceiver.create(receiverOptions)
-        //.receiveAutoAck()
-        //.concatMap(r -> r) ①
-        //.subscribe(r -> System.out.println("Received: " + r)); ②
-
-//        Flux<ReceiverRecord<String, String>> inboundFlux =
-//                KafkaReceiver.create(receiverOptions)
-//                        .receiveAutoAck()
-//                        .concatMap(r -> r)
-//                        .;
-
-
-
-
-
-        // receiverOptions = receiverOptions.assignment(Collections.singleton(new TopicPartition
-        //(topic, 0)));
-
-//        KafkaReceiver.create(receiverOptions)
-//                        .receive()
-//                        .doOnNext(r -> {
-//                            System.out.println("Received: " + r);
-//                    r.receiverOffset().commit().block();
-//                });
-
-//        receiver.receive()
-//                .doOnNext(r -> {
-//                    process(r);
-//                    r.receiverOffset().commit().block();
-//                });
-//
-//        inboundFlux
-//
-//
-//        KafkaReceiver.create(receiverOptions)
-//                .receiveAutoAck()
-//                .concatMap(r -> r)
-//                .subscribe(r -> System.out.println("Received: " + r));
     }
 
     private void processSensorData(String id, String value) {

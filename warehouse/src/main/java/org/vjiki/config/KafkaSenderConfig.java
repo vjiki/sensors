@@ -54,9 +54,6 @@ public class KafkaSenderConfig {
         return SenderOptions.<String, String>create(producerProps())
                         .maxInFlight(maxInFlight)
                         .stopOnError(stopOnError);
-
-        //public SenderOptions<K, V> scheduler(Scheduler scheduler);
-        // get responses on separate thread
     }
 
     public Map<String, Object> producerProps() {
