@@ -1,12 +1,12 @@
-package org.vjiki.monitoring;
+package org.vjiki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MonitoringApplication {
+public class WarehouseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MonitoringApplication.class, args);
+		SpringApplication.run(WarehouseApplication.class, args);
 	}
 }

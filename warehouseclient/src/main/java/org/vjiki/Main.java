@@ -11,21 +11,24 @@ public class Main {
     private static final int HUMIDITY_SENSOR_PORT = 3355;
 
     public static void main(String[] args) {
-        try {
-            DatagramSocket socket = new DatagramSocket();
 
-            // Simulate temperature sensor data
-            String tempData = "sensor_id=t1;value=80";
-            sendUdpData(socket, tempData, TEMP_SENSOR_PORT);
+        while(true) {
+            try {
+                DatagramSocket socket = new DatagramSocket();
 
-            // Simulate humidity sensor data
-            String humidityData = "sensor_id=h1;value=90";
-            sendUdpData(socket, humidityData, HUMIDITY_SENSOR_PORT);
+                // Simulate temperature sensor data
+                String tempData = "sensor_id=t1;value=80";
+                sendUdpData(socket, tempData, TEMP_SENSOR_PORT);
 
-            socket.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
+                // Simulate humidity sensor data
+                String humidityData = "sensor_id=h1;value=90";
+                sendUdpData(socket, humidityData, HUMIDITY_SENSOR_PORT);
+
+                socket.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+                e.printStackTrace();
+            }
         }
     }
 
